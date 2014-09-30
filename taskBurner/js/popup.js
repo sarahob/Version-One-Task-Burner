@@ -11,8 +11,7 @@
     //alarm object for notification
     alarmInfo : {},
 
-    baseUrl: '',
-     /*
+       /*
       Attach initial click handlers to buttons
     */
     attachInitialHandlers: function(){
