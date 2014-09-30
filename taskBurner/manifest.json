@@ -18,13 +18,13 @@
 	},
 
 	"browser_action": {
-		"default_icon": "images/icon.png",
+		"default_icon": "style/images/icon.png",
 		"default_popup": "popup.htm"
 	},
 
 	"icons": {
-		"16": "images/icon.png",
-		"48": "images/icon.png",
-		"128": "images/icon.png"
+		"16": "style/images/icon.png",
+		"48": "style/images/icon.png",
+		"128": "style/images/icon.png"
 	}
 }

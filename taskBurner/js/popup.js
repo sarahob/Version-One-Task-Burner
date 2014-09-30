@@ -10,8 +10,7 @@
     statusMap : {},
     //alarm object for notification
     alarmInfo : {},
-
-       /*
+     /*
       Attach initial click handlers to buttons
     */
     attachInitialHandlers: function(){
@@ -64,12 +63,10 @@
           Check local storage, if username and password are not found open the details view first, otherwise load tasks
       */
     checkIfUserExists: function(){
-
           chrome.storage.local.get(['username', 'baseUrl'], function (items){
               if(items.username && items.baseUrl){
                 ns.userDetails.uname = items.username;
                 ns.userDetails.baseUrl = items.baseUrl;
-
                 ns.validateUser(ns.userDetails.uname, ns.userDetails.baseUrl, false, function(validUser){
                   if(validUser){
                     ns.requestTasks();
@@ -334,20 +331,25 @@
                 callback(false); 
             }else{
                 if(store){
-                  ns.storeUserInfo(uname, baseUrl);
+                  ns.storeUserInfo(uname, baseUrl, function(){
+                      callback(true);
+                  });
+                }else{
+                  callback(true);
                 }
-                callback(true);
+                
             }
           },
-          error: function(){callback(false)}, 
+          error: function(){callback(false);}, 
           beforeSend: ns.setHeader
           });
     },
 
-    storeUserInfo: function(uname, baseUrl){
+    storeUserInfo: function(uname, baseUrl, callback){
       chrome.storage.local.set({'username': uname, 'baseUrl': baseUrl}, function(){
           ns.userDetails.uname = uname;
           ns.userDetails.baseUrl = baseUrl;
+          callback();
         });
     },
 
@@ -404,9 +406,9 @@
   };
 
   document.addEventListener('DOMContentLoaded', function () {
-    ns.attachInitialHandlers();
-    ns.checkIfUserExists();
-  });
+      ns.attachInitialHandlers();
+      ns.checkIfUserExists();
+   });
 
 }());
 
