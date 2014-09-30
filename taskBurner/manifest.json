@@ -3,7 +3,7 @@
 
 	"name": "Version One Task Burner",
 	"description": "Burn down task hours in version one.",
-	"version": "1.0",
+	"version": "1.1",
 
 	"permissions": [
 	"http://*/",
