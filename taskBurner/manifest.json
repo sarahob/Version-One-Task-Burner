@@ -1,0 +1,30 @@
+{
+	"manifest_version": 2,
+
+	"name": "Version One Task Burner",
+	"description": "Burn down task hours in version one.",
+	"version": "1.0",
+
+	"permissions": [
+	"http://*/",
+	"storage",
+	"alarms",
+	"notifications",
+	"background"
+	],
+
+	"background": {
+		"scripts": ["js/background.js"]	
+	},
+
+	"browser_action": {
+		"default_icon": "images/icon.png",
+		"default_popup": "popup.htm"
+	},
+
+	"icons": {
+		"16": "images/icon.png",
+		"48": "images/icon.png",
+		"128": "images/icon.png"
+	}
+}

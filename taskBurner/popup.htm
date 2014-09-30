@@ -1,0 +1,47 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Version One Task Burner Extension</title>
+
+    <link rel="stylesheet" type="text/css" href="style/plugin.css">
+
+    <script src="scripts/jQuery.js"></script>
+    <script src="js/popup.js"></script>
+    <script src="scripts/mustache.js"></script>
+
+  </head>
+   <body>
+       <div id="msgSlider"></div>
+       <div class="header">
+          <ul>
+            <li><img src="images/icon.png" alt="logo" height="35px" width="35px"/></li>
+            <li><h4>Version One: Task Burner</h4></li>
+            <li><input type="image" src="images/settings.png" alt="settingsButton" class="settingsImg" id = "settings" height="25px" width="25px"></li> 
+          </ul>
+       </div>
+
+       <div class="main">
+       </div>
+
+       <div class="loading">
+          <img src = "images/loader.gif" alt="loading..."/>
+       </div>
+
+      <div class="settings"> 
+        <p>Change User Details</p>
+          <p>Update your Version One username: </p>
+            <div>
+               <input type="text" placeholder="username" id="uname">
+               <p>Update your Version One Url: </p>
+               <input type="text" id="baseUrl" placeholder="baseurl" style="width: 312px;">
+               <input type="submit" name="submit" id="changeUserDetails" value="Change Details"/>
+              </div>
+                 
+    </div>
+    
+   <div class="about">
+        <center><p>VersionOne Task Burner 1.1 &copy;Sarah O'Brien 2014 Contact: <a href="mailto:sarah.obrien@emc.com">sarah.obrien@emc.com</a></p></center>
+   </div>
+  </body>
+</html>
+
